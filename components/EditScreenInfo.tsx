@@ -1,44 +1,26 @@
 import * as WebBrowser from 'expo-web-browser';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 
 import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
-import { Text, View } from './Themed';
+import {MonoText} from './StyledText';
+import {Text, View} from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function EditScreenInfo({path}: { path: string }) {
   return (
-    <View>
       <View style={styles.getStartedContainer}>
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen:
+          This is a game called "Snake"!
         </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
-        </View>
-
         <Text
-          style={styles.getStartedText}
+          style={styles.mainText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          Change any of the text, save the file, and your app will automatically update.
+          If you want to help me, then here is the card number: 0000 0000 0000 0000
         </Text>
       </View>
-
-      <View style={styles.helpContainer}>
-        <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </View>
   );
 }
 
@@ -63,11 +45,14 @@ const styles = StyleSheet.create({
   getStartedText: {
     fontSize: 17,
     lineHeight: 24,
+    marginHorizontal: 10,
     textAlign: 'center',
   },
-  helpContainer: {
+  mainText: {
     marginTop: 15,
-    marginHorizontal: 20,
+    marginHorizontal: 10,
+    fontSize: 17,
+    lineHeight: 24,
     alignItems: 'center',
   },
   helpLink: {
