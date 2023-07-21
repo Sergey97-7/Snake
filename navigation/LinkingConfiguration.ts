@@ -4,22 +4,26 @@
  * https://reactnavigation.org/docs/configuring-links
  */
 
-import { LinkingOptions } from '@react-navigation/native';
+import {LinkingOptions} from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 
-import { RootStackParamList } from '../types';
+import {RootStackParamList} from '../types';
+import OneScreen from "../screens/OneScreen";
 
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.createURL('/')],
   config: {
     screens: {
+      OneScreen: {
+
+      },
+      MainScreen: {
+        screens: {
+          TabOneScreen: 'one',
+        },
+      },
       Root: {
         screens: {
-          MainScreen: {
-            screens: {
-              TabOneScreen: 'one',
-            },
-          },
           TabTwo: {
             screens: {
               TabTwoScreen: 'two',

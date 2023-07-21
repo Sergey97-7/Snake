@@ -7,18 +7,18 @@ import {FontAwesome, MaterialIcons} from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import * as React from "react";
 
-export default function TabOneScreen({navigation}: RootTabScreenProps<'MainScreen'>) {
+export default function OneScreen({navigation}: RootTabScreenProps<'MainScreen'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Do you wanna play?</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"/>
+
+
       {/*<Pressable*/}
       {/*  // onPress={() => navigation.navigate('TabTwo')}*/}
       {/*  style={({pressed}) => ({*/}
       {/*    // opacity: pressed ? 0.5 : 1,*/}
       {/*  })}>*/}
         <FontAwesome.Button size={20} name="play" backgroundColor="#3b5998"
-                            onPress={()=> navigation.navigate('Root')}
+                            onPress={()=> navigation.navigate('TabTwo')}
         >
           Play
         </FontAwesome.Button>

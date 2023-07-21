@@ -9,6 +9,8 @@ import Head from "../components/Game/Head";
 import Food from "../components/Game/Food";
 import Tail from "../components/Game/Tail";
 import GameLoop from "../components/Game/systems/GameLoop";
+import {FontAwesome, AntDesign} from "@expo/vector-icons";
+// import { AntDesign } from '@expo/vector-icons';
 
 
 export default function TabTwoScreen() {
@@ -99,9 +101,23 @@ export default function TabTwoScreen() {
       />
       <View style={styles.controlContainer}>
         <View style={styles.controllerRow}>
-          <TouchableOpacity onPress={() => engine.current.dispatch("move-up")}>
-            <View style={styles.controlBtn}/>
-          </TouchableOpacity>
+          {/*<AntDesign name="arrowup" size={24} color="black" />*/}
+          {/*<FontAwesome.Button size={20} name="arrow-up" backgroundColor="#3b5998"*/}
+          {/*                    onPress={() => engine.current.dispatch("move-up")}*/}
+          {/*>*/}
+          {/*</FontAwesome.Button>*/}
+          {/*<TouchableOpacity onPress={() => engine.current.dispatch("move-up")}>*/}
+          {/*<View style={{justiftyContent:"center", alignItems:"center"}}>*/}
+          <AntDesign.Button style={{
+            textAlign: 'center',
+            justifyContent: 'center',
+            width: 60,
+            paddingRight: 0,
+            alignSelf: 'center',
+            height: 60
+          }} name="arrowup" size={20} color="black"/>
+          {/*</View>*/}
+          {/*</TouchableOpacity>*/}
         </View>
         <View style={styles.controllerRow}>
           <TouchableOpacity
